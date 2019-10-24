@@ -4,22 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        int[] num = {1, 2, 3, 4, 5, 6, 7, 8, 9 , 10};
         int numTotal = 0;
+        double[] newArray = new double[10];
+        for(int i = 0; i < newArray.length;i++) {
 
-        for( int i = 0; i < num.length;i++) {
-            numTotal += num[i];
+            System.out.println("Enter numbers");
+            newArray[i] = keyboard.nextDouble();
+            numTotal += newArray[i];
         }
-        System.out.println(numTotal);
-
-
-        int[] newArray = new int[10];
-
-        System.out.println("Enter numbers");
-        int number = keyboard.nextInt();
-
-
-
+        Double avg = numTotal/newArray.length;
+        System.out.println(avg);
     }
 
 
